@@ -1,5 +1,6 @@
 # Prerequisites
 server
+
 *.d
 saida.jpg
 doTheWorld.h

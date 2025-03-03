@@ -1,4 +1,4 @@
-
+gcc dependencies/darwin.c -o darwin.out
 #se building trusted anchors
 cd dependencies/BearSSL
 make
