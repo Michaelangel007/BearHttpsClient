@@ -3,10 +3,7 @@ mkdir dependencies
 
 
 ### Required Tools 
-curl -L https://github.com/OUIsolutions/CAmalgamator/releases/download/0.0.4/CAmalgamator.c -o dependencies/CAmalgamator.c
-
-
-curl -L https://github.com/OUIsolutions/SilverChain/releases/download/v0.07/SilverChain.c -o dependencies/SilverChain.c 
+curl -L https://github.com/OUIsolutions/Darwin/releases/download/0.020/darwin.c -o dependencies/darwin.c
 
 ### Project Dependencies
 
