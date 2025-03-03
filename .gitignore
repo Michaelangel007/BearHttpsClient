@@ -15,7 +15,6 @@ darwintypes.lua
 # Object files
 .vscode
 src/imports
-release
 teste.c
 micro_client.c
 test.c
