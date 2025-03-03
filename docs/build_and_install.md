@@ -47,10 +47,16 @@ sh compile_darwin.sh
 #call the tools to reorganize the project and generate the amalgamation
 sh darwin_build.sh
 ```
-
-### If you want to reinstall dependneices
+### Regenerating the BearSSLTrustAnchors.h
+If you want to regenerate the BearSSLTrustAnchors.h file you can call the following:
 ```bash
-sh installldependencies.sh 
+sh generate_trust_anchors.sh
+```
+
+
+### If you want to reinstall dependencies
+```bash
+sh install_dependencies.sh
 ```
 
 ### Mocking dependencies or dependencies implementations 
