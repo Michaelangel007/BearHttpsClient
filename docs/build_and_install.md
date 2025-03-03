@@ -34,21 +34,17 @@ With mingw64:
 i686-w64-mingw32-gcc examples\example_simple.c -o bin\example_simple.exe -lws2_32
 ```
 
-## Build from scratch
-
-For buiding from scratch you need to have [darwin](https://github.com/OUIsolutions/Darwin/) installed on your machine. To install darwin:
+### Build from scratch
+For build from scrach, clone these repo and run:
 ```bash
-curl -L https://github.com/OUIsolutions/Darwin/releases/download/0.020/darwin.out -o darwin.out && chmod +x darwin.out &&  sudo  mv darwin.out /usr/bin/darwin
+sh build_dependencies.sh
+sh build.sh 
 ```
 
-Then you can build the project with in the root dir of the project:
+### If you want to reinstall dependneices
 ```bash
-darwin run_blueprint build/  --mode folder
+sh installldependencies.sh 
 ```
-
-It will generate all the **releases** in the **/release** dir.
-
-
 
 ### Mocking dependencies or dependencies implementations 
 
