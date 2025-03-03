@@ -34,21 +34,30 @@ With mingw64:
 i686-w64-mingw32-gcc examples\example_simple.c -o bin\example_simple.exe -lws2_32
 ```
 
-## Build from scratch
-
-For buiding from scratch you need to have [darwin](https://github.com/OUIsolutions/Darwin/) installed on your machine. To install darwin:
-```bash
-curl -L https://github.com/OUIsolutions/Darwin/releases/download/0.020/darwin.out -o darwin.out && chmod +x darwin.out &&  sudo  mv darwin.out /usr/bin/darwin
+### Full Folder
+If you want to use the lib in full folder mode,you can just include the **src/one.c** file in your project:
+```c
+#include "src/one.c"
 ```
 
-Then you can build the project with in the root dir of the project:
+### Calling the Build Script
+if you want to regenerate the amalgamations and silverchain organization you can call these:
 ```bash
-darwin run_blueprint build/  --mode folder
+sh compile_darwin.sh
+#call the tools to reorganize the project and generate the amalgamation
+sh darwin_build.sh
+```
+### Regenerating the BearSSLTrustAnchors.h
+If you want to regenerate the BearSSLTrustAnchors.h file you can call the following:
+```bash
+sh generate_trust_anchors.sh
 ```
 
-It will generate all the **releases** in the **/release** dir.
 
-
+### If you want to reinstall dependencies
+```bash
+sh install_dependencies.sh
+```
 
 ### Mocking dependencies or dependencies implementations 
 

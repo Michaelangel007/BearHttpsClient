@@ -1,19 +1,19 @@
 # Prerequisites
 server
+
 *.d
 saida.jpg
 doTheWorld.h
+CAmalgamator
+SilverChain
 basic.png
 teste*
 vgcore*
-BearSSL
-dependencies
-BearHttpsClientOne.c
+
+
 darwintypes.lua
 # Object files
 .vscode
-src/imports
-release
 teste.c
 micro_client.c
 test.c
