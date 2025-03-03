@@ -34,11 +34,18 @@ With mingw64:
 i686-w64-mingw32-gcc examples\example_simple.c -o bin\example_simple.exe -lws2_32
 ```
 
-### Build from scratch
-For build from scrach, clone these repo and run:
+### Full Folder
+If you want to use the lib in full folder mode,you can just include the **src/one.c** file in your project:
+```c
+#include "src/one.c"
 ```bash
-sh build_dependencies.sh
-sh build.sh 
+
+### Contribuiting
+For Contributing to these repo you can use the following commands:
+```bash
+sh compile_darwin.sh
+#call the tools to reorganize the project and generate the amalgamation
+sh darwin_build.sh
 ```
 
 ### If you want to reinstall dependneices
