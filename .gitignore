@@ -14,7 +14,6 @@ vgcore*
 darwintypes.lua
 # Object files
 .vscode
-src/imports
 teste.c
 micro_client.c
 test.c

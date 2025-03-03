@@ -1,0 +1,21 @@
+#include "imports.fdeclare.h"
+#ifndef LuaSilverChain_fdefine
+#define LuaSilverChain_fdefine
+#include "../extra/fdefine.extra.c"
+#include "../headers/fdefine.headers.c"
+#include "../keyval/fdefine.keyval.c"
+#include "../namespace/fdefine.namespace.c"
+#include "../namespace/request/fdefine.request.c"
+#include "../namespace/response/fdefine.response.c"
+#include "../network/fdefine.network.c"
+#include "../ownership/fdefine.ownership.c"
+#include "../request/body_send/fdefine.body_send.c"
+#include "../request/fetch/fdefine.fetch.c"
+#include "../request/request/fdefine.request.c"
+#include "../requisition_props/fdefine.requisition_props.c"
+#include "../response/fdefine.http_parser.c"
+#include "../response/fdefine.read_write.c"
+#include "../response/fdefine.response.c"
+#include "../src_dependencies/fdefine.dependencies.c"
+#include "../str/fdefine.str.c"
+#endif

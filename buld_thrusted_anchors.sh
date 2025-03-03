@@ -1,4 +1,3 @@
-gcc dependencies/darwin.c -o darwin.out
 cd dependencies/BearSSL
 make
 cd ../..
