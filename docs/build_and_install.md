@@ -38,10 +38,10 @@ i686-w64-mingw32-gcc examples\example_simple.c -o bin\example_simple.exe -lws2_3
 If you want to use the lib in full folder mode,you can just include the **src/one.c** file in your project:
 ```c
 #include "src/one.c"
-```bash
+```
 
-### Contribuiting
-For Contributing to these repo you can use the following commands:
+### Calling the Build Script
+if you want to regenerate the amalgamations and silverchain organization you can call these:
 ```bash
 sh compile_darwin.sh
 #call the tools to reorganize the project and generate the amalgamation
