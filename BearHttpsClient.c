@@ -22,11 +22,13 @@ SOFTWARE.
  */ 
 #include "BearHttpsClient.h"
 
-#ifndef LuaSilverChain_fdefine
-#define LuaSilverChain_fdefine
+#ifndef BearHttpsClient_fdefine
+#define BearHttpsClient_fdefine
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -67,7 +69,9 @@ char * private_BearHttps_format_vaarg(const char *expresion, va_list args){
 }
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -105,7 +109,9 @@ private_BearHttpsKeyVal * private_BearHttpsHeaders_get_key_val_by_index(private_
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -137,7 +143,9 @@ void  private_BearHttpsKeyVal_free(private_BearHttpsKeyVal *self){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -153,7 +161,9 @@ BearHttpsNamespace newBearHttpsNamespace(){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -195,7 +205,9 @@ BearHttpsRequestNamespace newBearHttpsRequestNamespace(){
 }
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -225,7 +237,9 @@ BearHttpsResponseNamespace newBearHttpsResponseNamespace(){
 }
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -237,18 +251,18 @@ static int private_BearHttpsRequest_connect_ipv4(BearHttpsResponse *self, const 
         return -1; 
     }
 
-    struct sockaddr_in server_addr;
+    Universal_sockaddr_in server_addr;
     memset(&server_addr, 0, sizeof(server_addr));
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(port); 
+    server_addr.sin_family = UNI_AF_INET;
+    server_addr.sin_port = Universal_htons(port); 
 
-    if (inet_pton(AF_INET, ipv4_ip, &server_addr.sin_addr) <= 0) {
+    if (Universal_inet_pton(UNI_AF_INET, ipv4_ip, &server_addr.sin_addr) <= 0) {
         BearHttpsResponse_set_error(self,"ERROR: invalid address",BEARSSL_HTTPS_INVALID_IPV4);
         Universal_close(sockfd);
         return -1;
     }
 
-    if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
+    if (Universal_connect(sockfd, (Universal_sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
         BearHttpsResponse_set_error(self,"ERROR: failed to connect",BEARSSL_HTTPS_FAILT_TO_CONNECT);
         Universal_close(sockfd); 
         return -1;
@@ -257,22 +271,22 @@ static int private_BearHttpsRequest_connect_ipv4(BearHttpsResponse *self, const 
     return sockfd;
 }
 static int private_BearHttpsRequest_connect_ipv4_no_error_raise( const char *ipv4_ip, int port) {
-    int sockfd = Universal_socket(AF_INET, SOCK_STREAM, 0);
+    int sockfd = Universal_socket(UNI_AF_INET, UNI_SOCK_STREAM, 0);
     if (sockfd < 0) {
-        return -1; 
+        return -1;
     }
 
-    struct sockaddr_in server_addr;
+    Universal_sockaddr_in server_addr;
     memset(&server_addr, 0, sizeof(server_addr));
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(port); 
+    server_addr.sin_family = UNI_AF_INET;
+    server_addr.sin_port = Universal_htons(port); 
 
-    if (inet_pton(AF_INET, ipv4_ip, &server_addr.sin_addr) <= 0) {
+    if (Universal_inet_pton(UNI_AF_INET, ipv4_ip, &server_addr.sin_addr) <= 0) {
         Universal_close(sockfd);
         return -1;
     }
 
-    if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
+    if (Universal_connect(sockfd, (Universal_sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
         Universal_close(sockfd); 
         return -1;
     }
@@ -430,7 +444,9 @@ static int private_BearHttps_sock_write(void *ctx, const unsigned char *buf, siz
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -470,7 +486,9 @@ void private_BearsslHttps_set_str_considering_ownership(
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -654,7 +672,9 @@ cJSON * BearHttpsRequest_create_cJSONPayloadArray(BearHttpsRequest *self){
 #endif
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -838,7 +858,9 @@ BearHttpsResponse * BearHttpsRequest_fetch(BearHttpsRequest *self){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -961,7 +983,9 @@ void BearHttpsRequest_free(BearHttpsRequest *self){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1052,7 +1076,9 @@ void private_BearHttpsRequisitionProps_free(private_BearHttpsRequisitionProps *s
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1182,7 +1208,9 @@ void private_BearHttpsResponse_read_til_end_of_headers_or_reach_limit(
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1377,7 +1405,9 @@ cJSON * BearHttpsResponse_read_body_json(BearHttpsResponse *self){
 #endif
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1519,9 +1549,15 @@ char* BearHttpsResponse_get_header_value_by_sanitized_key(BearHttpsResponse*self
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
+#ifdef _WIN32
+typedef __m128i __m128i_u;
+#endif
 
 #if !defined(BEARSSL_HTTPS_MOCK_UNIVERSAL_SOCKET_DEFINE)
 /* MIT License
@@ -1552,13 +1588,13 @@ SOFTWARE.
 #define UniversalSocket_def
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
-extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags){
-    return recv(fd, buf, n,flags);
-}
+
 extern ssize_t Universal_send (int fd, const void *buf, size_t n, int flags){
     return send(fd,buf,n,flags);
 }
@@ -1675,7 +1711,9 @@ extern in_addr_t Universal_inet_addr(const char *ip) {
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1695,7 +1733,9 @@ extern int Universal_connect(int sockfd, const Universal_sockaddr *addr, socklen
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1709,7 +1749,9 @@ const char* Universal_gai_strerror(int e_code){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1754,7 +1796,9 @@ Universal_hostent *Universal_gethostbyname(const char *hostname){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1766,13 +1810,19 @@ extern const char* Universal_inet_ntoa(Universal_in_addr addr) {
   return inet_ntop(UNI_AF_INET, &addr, buffer, INET_ADDRSTRLEN);
 }
 
+extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags){
+    return recv(fd, buf, n,flags);
+}
+
 #endif
 
 
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1795,7 +1845,9 @@ extern char *Universal_GetLastError(){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1834,7 +1886,9 @@ void Universal_freeaddrinfo(Universal_addrinfo *addrinfo_ptr){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1845,13 +1899,41 @@ extern const char* Universal_inet_ntoa(Universal_in_addr addr) {
   return inet_ntoa(addr);
 }
 
+ssize_t private_Universal_recv_all(int fd, void *buf, size_t n){
+  int max = 0;
+  int received;
+
+  while (max < n) {
+    received = recv(fd, buf + max, n - max, 0);
+  
+    if (received <= 0) { 
+      return received;
+    }
+
+    max += received;
+  }
+
+  return max;
+}
+
+extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags){
+
+  if(flags == UNI_MSG_WAITALL){
+    return private_Universal_recv_all(fd, buf, n);
+  }
+
+  return recv(fd, buf, n, flags);
+}
+
 #endif
 
 
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1890,7 +1972,9 @@ extern char *Universal_GetLastError(){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -1914,9 +1998,6 @@ extern int Universal_close (int fd){
 
 //#if defined(_GET_ADDR_INFO_DEFAULT_)
 int Universal_getaddrinfo(const char *node, const char *service, const Universal_addrinfo *hints, Universal_addrinfo **res){
-    if (getaddrinfo) {
-        return getaddrinfo(node, service, hints, res);
-    }
 
 
     Universal_hostent *he;
@@ -1959,10 +2040,7 @@ int Universal_getaddrinfo(const char *node, const char *service, const Universal
 
 
 void Universal_freeaddrinfo(Universal_addrinfo *addrinfo_ptr){
-    if(getaddrinfo){
-        freeaddrinfo(addrinfo_ptr);
-        return;
-    }
+
     free(addrinfo_ptr->ai_addr);
     free(addrinfo_ptr->ai_canonname);
     free(addrinfo_ptr);
@@ -66301,8 +66379,11 @@ CJSON_PUBLIC(void) cJSON_free(void *object)
 
 #endif
 
+
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 

@@ -1,6 +1,6 @@
 #include "imports.typesH.h"
-#ifndef LuaSilverChain_consts
-#define LuaSilverChain_consts
+#ifndef BearHttpsClient_consts
+#define BearHttpsClient_consts
 #include "../consts/consts.body_types.h"
 #include "../consts/consts.dns.h"
 #include "../consts/consts.errors.h"

@@ -1,5 +1,5 @@
 #include "imports.types.h"
-#ifndef LuaSilverChain_typesB
-#define LuaSilverChain_typesB
+#ifndef BearHttpsClient_typesB
+#define BearHttpsClient_typesB
 #include "../headers/typesB.headers.h"
 #endif

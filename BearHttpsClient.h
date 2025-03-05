@@ -20,8 +20,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */ 
-#ifndef LuaSilverChain_dep_declare
-#define LuaSilverChain_dep_declare
+#ifndef BearHttpsClient_dep_declare
+#define BearHttpsClient_dep_declare
 
 
 #include <stdlib.h>
@@ -115,7 +115,9 @@ SOFTWARE.
 #define UniversalSocket_mac
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -130,7 +132,6 @@ SOFTWARE.
 #define UNI_SOCK_DGRAM SOCK_DGRAM
 #define UNI_SOCK_RAW SOCK_RAW
 #define UNI_MSG_PEEK MSG_PEEK
-#define UNI_MSG_WAITALL MSG_WAITALL
 #define UNI_SO_RCVTIMEO SO_RCVTIMEO
 #define UNI_SO_SNDTIMEO SO_SNDTIMEO
 #define UNI_SO_KEEPALIVE SO_KEEPALIVE
@@ -160,7 +161,9 @@ SOFTWARE.
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -177,6 +180,7 @@ SOFTWARE.
 #define UNI_EINPROGRESS EINPROGRESS
 #define UNI_EADDRNOTAVAIL EADDRNOTAVAIL
 #define UNI_ENETUNREACH ENETUNREACH
+#define UNI_MSG_WAITALL MSG_WAITALL
 
 #define UNI_EAI_NONAME EAI_NONAME 
 #define UNI_EAI_AGAIN EAI_AGAIN
@@ -187,7 +191,9 @@ SOFTWARE.
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -198,6 +204,7 @@ SOFTWARE.
 #define UNI_SOCKET_ERROR SOCKET_ERROR
 #define UNI_EAGAIN WSAEWOULDBLOCK
 #define UNI_EWOULDBLOCK WSAEWOULDBLOCK
+#define UNI_MSG_WAITALL 0
 
 #define UNI_ECONNREFUSED WSAECONNREFUSED
 #define UNI_ETIMEDOUT WSAETIMEDOUT
@@ -225,7 +232,9 @@ SOFTWARE.
 #define UniversalSocket_types
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -250,7 +259,9 @@ typedef struct hostent Universal_hostent;
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -268,7 +279,9 @@ typedef ssize_t Universal_ssize_t;
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -294,7 +307,9 @@ typedef long Universal_ssize_t;
 #define UniversalSocket_dec
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -302,16 +317,17 @@ typedef long Universal_ssize_t;
 
 extern const char* Universal_inet_ntoa(Universal_in_addr addr);
 
-
+extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags);
 
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
-extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags);
 
 extern ssize_t Universal_send (int fd, const void *buf, size_t n, int flags);
 
@@ -331,7 +347,9 @@ extern in_addr_t Universal_inet_addr(const char *ip);
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -348,7 +366,9 @@ extern int Universal_connect(int sockfd, const Universal_sockaddr *addr, socklen
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -364,7 +384,9 @@ int Universal_getaddrinfo(const char *node, const char *service, const Universal
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -380,7 +402,9 @@ extern char *Universal_GetLastError();
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -402,7 +426,9 @@ void Universal_freeaddrinfo(Universal_addrinfo *addrinfo_ptr);
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -431,6 +457,22 @@ Universal_hostent *Universal_gethostbyname(const char *hostname);
 
 
 
+
+
+//silver_chain_scope_start
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
+
+//silver_chain_scope_end
+
+
+
+#if defined(_WIN32)
+
+ssize_t private_Universal_recv_all(int fd, void *buf, size_t n);
+
+#endif
 
 #endif
 
@@ -26906,11 +26948,13 @@ CJSON_PUBLIC(void) cJSON_free(void *object);
 
 #endif
 
-#ifndef LuaSilverChain_types
-#define LuaSilverChain_types
+#ifndef BearHttpsClient_types
+#define BearHttpsClient_types
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -26926,7 +26970,9 @@ typedef struct  private_BearHttpsKeyVal{
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -26955,7 +27001,9 @@ typedef struct private_BearHttpsBodyJsonRequest{
 #endif
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -26969,7 +27017,9 @@ typedef struct BearHttpsClientDnsProvider {
 }BearHttpsClientDnsProvider;
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -26986,11 +27036,13 @@ typedef struct private_BearHttpsRequisitionProps{
 
 #endif
 
-#ifndef LuaSilverChain_typesB
-#define LuaSilverChain_typesB
+#ifndef BearHttpsClient_typesB
+#define BearHttpsClient_typesB
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27002,11 +27054,13 @@ typedef struct  private_BearHttpsHeaders{
 
 #endif
 
-#ifndef LuaSilverChain_typesC
-#define LuaSilverChain_typesC
+#ifndef BearHttpsClient_typesC
+#define BearHttpsClient_typesC
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27051,11 +27105,13 @@ typedef struct BearHttpsRequest{
 
 #endif
 
-#ifndef LuaSilverChain_typesD
-#define LuaSilverChain_typesD
+#ifndef BearHttpsClient_typesD
+#define BearHttpsClient_typesD
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27092,11 +27148,13 @@ typedef struct BearHttpsResponse{
 
 #endif
 
-#ifndef LuaSilverChain_typesE
-#define LuaSilverChain_typesE
+#ifndef BearHttpsClient_typesE
+#define BearHttpsClient_typesE
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 typedef struct BearHttpsRequestNamespace{
@@ -27138,7 +27196,9 @@ void (*set_dns_providers)(BearHttpsRequest *self ,BearHttpsClientDnsProvider  *d
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 typedef struct BearHttpsResponseNamespace{
@@ -27182,11 +27242,13 @@ typedef struct BearHttpsResponseNamespace{
 
 #endif
 
-#ifndef LuaSilverChain_typesH
-#define LuaSilverChain_typesH
+#ifndef BearHttpsClient_typesH
+#define BearHttpsClient_typesH
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27200,11 +27262,13 @@ typedef struct BearHttpsNamespace{
 
 #endif
 
-#ifndef LuaSilverChain_consts
-#define LuaSilverChain_consts
+#ifndef BearHttpsClient_consts
+#define BearHttpsClient_consts
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27215,7 +27279,9 @@ typedef struct BearHttpsNamespace{
 #define PRIVATE_BEARSSL_BODY_JSON 3
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27231,7 +27297,9 @@ BearHttpsClientDnsProvider privateBearHttpsProviders[] = {
 int privateBearHttpsProvidersSize = sizeof(privateBearHttpsProviders)/sizeof(BearHttpsClientDnsProvider);
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27255,7 +27323,9 @@ int privateBearHttpsProvidersSize = sizeof(privateBearHttpsProviders)/sizeof(Bea
 #define BEARSSL_HTTPS_IMPOSSIBLE_TO_SEND_DATA 17
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 #define BEARSSL_HTTPS_REFERENCE  0
@@ -27266,7 +27336,9 @@ int privateBearHttpsProvidersSize = sizeof(privateBearHttpsProviders)/sizeof(Bea
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 #define BEARSSL_HEADER_CHUNK           200
@@ -27276,11 +27348,13 @@ int privateBearHttpsProvidersSize = sizeof(privateBearHttpsProviders)/sizeof(Bea
 #define BEARSSL_BODY_REALLOC_FACTOR      1.5
 #endif
 
-#ifndef LuaSilverChain_fdeclare
-#define LuaSilverChain_fdeclare
+#ifndef BearHttpsClient_fdeclare
+#define BearHttpsClient_fdeclare
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27289,7 +27363,9 @@ bool private_BearHttps_is_sanitize_key(const char *key,const char *sanitized,int
 char * private_BearHttps_format_vaarg(const char *expresion, va_list args);
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27304,7 +27380,9 @@ private_BearHttpsKeyVal * private_BearHttpsHeaders_get_key_val_by_index(private_
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27320,7 +27398,9 @@ void  private_BearHttpsKeyVal_free(private_BearHttpsKeyVal *self);
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27329,7 +27409,9 @@ BearHttpsNamespace newBearHttpsNamespace();
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27338,7 +27420,9 @@ BearHttpsRequestNamespace newBearHttpsRequestNamespace();
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27346,7 +27430,9 @@ BearHttpsResponseNamespace newBearHttpsResponseNamespace();
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27365,7 +27451,9 @@ static int private_BearHttps_sock_write(void *ctx, const unsigned char *buf, siz
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27375,7 +27463,9 @@ void private_BearsslHttps_set_str_considering_ownership(char **dest, char *value
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27412,7 +27502,9 @@ cJSON * BearHttpsRequest_create_cJSONPayloadArray(BearHttpsRequest *self);
 #endif
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27422,7 +27514,9 @@ BearHttpsResponse * BearHttpsRequest_fetch(BearHttpsRequest *self);
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27462,7 +27556,9 @@ void BearHttpsRequest_free(BearHttpsRequest *self);
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27474,7 +27570,9 @@ private_BearHttpsRequisitionProps * private_new_private_BearHttpsRequisitionProp
 void private_BearHttpsRequisitionProps_free(private_BearHttpsRequisitionProps *self);
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -27536,7 +27634,9 @@ cJSON * BearHttpsResponse_read_body_json(BearHttpsResponse *self);
 #endif 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 long private_BearsslHttps_strlen(const char *str);

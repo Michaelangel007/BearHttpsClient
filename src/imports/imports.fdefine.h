@@ -1,6 +1,6 @@
 #include "imports.fdeclare.h"
-#ifndef LuaSilverChain_fdefine
-#define LuaSilverChain_fdefine
+#ifndef BearHttpsClient_fdefine
+#define BearHttpsClient_fdefine
 #include "../extra/fdefine.extra.c"
 #include "../headers/fdefine.headers.c"
 #include "../keyval/fdefine.keyval.c"
