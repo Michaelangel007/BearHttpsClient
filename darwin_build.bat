@@ -1,1 +1,1 @@
-./darwin.out run_blueprint
+darwin.exe run_blueprint
