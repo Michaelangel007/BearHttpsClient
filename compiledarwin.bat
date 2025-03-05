@@ -1,1 +1,1 @@
-gcc dependencies/darwin.c -o darwin.out
+gcc dependencies/darwin.c -o darwin.exe
