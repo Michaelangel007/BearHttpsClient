@@ -1,4 +1,4 @@
-#ifndef LuaSilverChain_dep_declare
-#define LuaSilverChain_dep_declare
+#ifndef BearHttpsClient_dep_declare
+#define BearHttpsClient_dep_declare
 #include "../src_dependencies/dep_declare.dependencies.h"
 #endif

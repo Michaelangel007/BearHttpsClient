@@ -26,13 +26,13 @@ SOFTWARE.
 #define UniversalSocket_def
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
-extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags){
-    return recv(fd, buf, n,flags);
-}
+
 extern ssize_t Universal_send (int fd, const void *buf, size_t n, int flags){
     return send(fd,buf,n,flags);
 }
@@ -149,7 +149,9 @@ extern in_addr_t Universal_inet_addr(const char *ip) {
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -169,7 +171,9 @@ extern int Universal_connect(int sockfd, const Universal_sockaddr *addr, socklen
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -183,7 +187,9 @@ const char* Universal_gai_strerror(int e_code){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -228,7 +234,9 @@ Universal_hostent *Universal_gethostbyname(const char *hostname){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -240,13 +248,19 @@ extern const char* Universal_inet_ntoa(Universal_in_addr addr) {
   return inet_ntop(UNI_AF_INET, &addr, buffer, INET_ADDRSTRLEN);
 }
 
+extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags){
+    return recv(fd, buf, n,flags);
+}
+
 #endif
 
 
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -269,7 +283,9 @@ extern char *Universal_GetLastError(){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -308,7 +324,9 @@ void Universal_freeaddrinfo(Universal_addrinfo *addrinfo_ptr){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -319,13 +337,41 @@ extern const char* Universal_inet_ntoa(Universal_in_addr addr) {
   return inet_ntoa(addr);
 }
 
+ssize_t private_Universal_recv_all(int fd, void *buf, size_t n){
+  int max = 0;
+  int received;
+
+  while (max < n) {
+    received = recv(fd, buf + max, n - max, 0);
+  
+    if (received <= 0) { 
+      return received;
+    }
+
+    max += received;
+  }
+
+  return max;
+}
+
+extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags){
+
+  if(flags == UNI_MSG_WAITALL){
+    return private_Universal_recv_all(fd, buf, n);
+  }
+
+  return recv(fd, buf, n, flags);
+}
+
 #endif
 
 
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -364,7 +410,9 @@ extern char *Universal_GetLastError(){
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -388,9 +436,6 @@ extern int Universal_close (int fd){
 
 //#if defined(_GET_ADDR_INFO_DEFAULT_)
 int Universal_getaddrinfo(const char *node, const char *service, const Universal_addrinfo *hints, Universal_addrinfo **res){
-    if (getaddrinfo) {
-        return getaddrinfo(node, service, hints, res);
-    }
 
 
     Universal_hostent *he;
@@ -433,10 +478,7 @@ int Universal_getaddrinfo(const char *node, const char *service, const Universal
 
 
 void Universal_freeaddrinfo(Universal_addrinfo *addrinfo_ptr){
-    if(getaddrinfo){
-        freeaddrinfo(addrinfo_ptr);
-        return;
-    }
+
     free(addrinfo_ptr->ai_addr);
     free(addrinfo_ptr->ai_canonname);
     free(addrinfo_ptr);

@@ -2,7 +2,8 @@
 darwin.silverchain.generate({
     src = "src",
     tags = { "dep_declare", "macros", "types","consts", "fdeclare", "fdefine" },
-    implement_main = false
+    implement_main = false,
+    project_short_cut = "BearHttpsClient",
 })
 
 

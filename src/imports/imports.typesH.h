@@ -1,5 +1,5 @@
 #include "imports.typesE.h"
-#ifndef LuaSilverChain_typesH
-#define LuaSilverChain_typesH
+#ifndef BearHttpsClient_typesH
+#define BearHttpsClient_typesH
 #include "../namespace/typesH.namespace.h"
 #endif

@@ -62,7 +62,9 @@ SOFTWARE.
 #define UniversalSocket_mac
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -77,7 +79,6 @@ SOFTWARE.
 #define UNI_SOCK_DGRAM SOCK_DGRAM
 #define UNI_SOCK_RAW SOCK_RAW
 #define UNI_MSG_PEEK MSG_PEEK
-#define UNI_MSG_WAITALL MSG_WAITALL
 #define UNI_SO_RCVTIMEO SO_RCVTIMEO
 #define UNI_SO_SNDTIMEO SO_SNDTIMEO
 #define UNI_SO_KEEPALIVE SO_KEEPALIVE
@@ -107,7 +108,9 @@ SOFTWARE.
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -124,6 +127,7 @@ SOFTWARE.
 #define UNI_EINPROGRESS EINPROGRESS
 #define UNI_EADDRNOTAVAIL EADDRNOTAVAIL
 #define UNI_ENETUNREACH ENETUNREACH
+#define UNI_MSG_WAITALL MSG_WAITALL
 
 #define UNI_EAI_NONAME EAI_NONAME 
 #define UNI_EAI_AGAIN EAI_AGAIN
@@ -134,7 +138,9 @@ SOFTWARE.
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -145,6 +151,7 @@ SOFTWARE.
 #define UNI_SOCKET_ERROR SOCKET_ERROR
 #define UNI_EAGAIN WSAEWOULDBLOCK
 #define UNI_EWOULDBLOCK WSAEWOULDBLOCK
+#define UNI_MSG_WAITALL 0
 
 #define UNI_ECONNREFUSED WSAECONNREFUSED
 #define UNI_ETIMEDOUT WSAETIMEDOUT
@@ -172,7 +179,9 @@ SOFTWARE.
 #define UniversalSocket_types
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -197,7 +206,9 @@ typedef struct hostent Universal_hostent;
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -215,7 +226,9 @@ typedef ssize_t Universal_ssize_t;
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -241,7 +254,9 @@ typedef long Universal_ssize_t;
 #define UniversalSocket_dec
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -249,16 +264,17 @@ typedef long Universal_ssize_t;
 
 extern const char* Universal_inet_ntoa(Universal_in_addr addr);
 
-
+extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags);
 
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
-extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags);
 
 extern ssize_t Universal_send (int fd, const void *buf, size_t n, int flags);
 
@@ -278,7 +294,9 @@ extern in_addr_t Universal_inet_addr(const char *ip);
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -295,7 +313,9 @@ extern int Universal_connect(int sockfd, const Universal_sockaddr *addr, socklen
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -311,7 +331,9 @@ int Universal_getaddrinfo(const char *node, const char *service, const Universal
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -327,7 +349,9 @@ extern char *Universal_GetLastError();
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -349,7 +373,9 @@ void Universal_freeaddrinfo(Universal_addrinfo *addrinfo_ptr);
 
 
 //silver_chain_scope_start
-//mannaged by silver chain
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
 
@@ -378,5 +404,21 @@ Universal_hostent *Universal_gethostbyname(const char *hostname);
 
 
 
+
+
+//silver_chain_scope_start
+//DONT MODIFY THIS COMMENT
+//this import is computationally generated
+//mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
+
+//silver_chain_scope_end
+
+
+
+#if defined(_WIN32)
+
+ssize_t private_Universal_recv_all(int fd, void *buf, size_t n);
+
+#endif
 
 #endif
