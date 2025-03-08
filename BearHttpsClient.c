@@ -32,6 +32,7 @@ SOFTWARE.
 
 //silver_chain_scope_end
 
+
 bool private_BearHttps_is_sanitize_key(const char *key,const char *sanitized,int sanitized_size){
     long key_size = private_BearsslHttps_strlen(key);
     int comparation_size = 0;
@@ -75,6 +76,7 @@ char * private_BearHttps_format_vaarg(const char *expresion, va_list args){
 
 //silver_chain_scope_end
 
+
 private_BearHttpsHeaders *private_newBearHttpsHeaders(){
     private_BearHttpsHeaders *self = (private_BearHttpsHeaders *)BearsslHttps_allocate(sizeof(private_BearHttpsHeaders));
     *self  = (private_BearHttpsHeaders){0};
@@ -115,6 +117,7 @@ private_BearHttpsKeyVal * private_BearHttpsHeaders_get_key_val_by_index(private_
 
 //silver_chain_scope_end
 
+
 private_BearHttpsKeyVal  *private_newBearHttpsKeyVal(){
     private_BearHttpsKeyVal *self = (private_BearHttpsKeyVal *)BearsslHttps_allocate(sizeof(private_BearHttpsKeyVal));
     *self = (private_BearHttpsKeyVal){0};
@@ -149,6 +152,7 @@ void  private_BearHttpsKeyVal_free(private_BearHttpsKeyVal *self){
 
 //silver_chain_scope_end
 
+
 BearHttpsNamespace newBearHttpsNamespace(){
     BearHttpsNamespace self = {0};
     self.REFERENCE = BEARSSL_HTTPS_REFERENCE;
@@ -166,6 +170,7 @@ BearHttpsNamespace newBearHttpsNamespace(){
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 
@@ -211,6 +216,7 @@ BearHttpsRequestNamespace newBearHttpsRequestNamespace(){
 
 //silver_chain_scope_end
 
+
 BearHttpsResponseNamespace newBearHttpsResponseNamespace(){
     BearHttpsResponseNamespace self = {0};
     self.read_body_chunck = BearHttpsResponse_read_body_chunck;
@@ -242,6 +248,8 @@ BearHttpsResponseNamespace newBearHttpsResponseNamespace(){
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
+
 
 
 static int private_BearHttpsRequest_connect_ipv4(BearHttpsResponse *self, const char *ipv4_ip, int port) {
@@ -451,6 +459,7 @@ static int private_BearHttps_sock_write(void *ctx, const unsigned char *buf, siz
 //silver_chain_scope_end
 
 
+
 void private_BearsslHttps_free_considering_ownership(void **value,bool *owner){
     if(*owner){
         BearsslHttps_free(*value);
@@ -491,6 +500,7 @@ void private_BearsslHttps_set_str_considering_ownership(
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 
@@ -680,6 +690,7 @@ cJSON * BearHttpsRequest_create_cJSONPayloadArray(BearHttpsRequest *self){
 
 
 
+
 BearHttpsResponse * BearHttpsRequest_fetch(BearHttpsRequest *self){
 
     BearHttpsResponse *response = NULL;
@@ -864,6 +875,7 @@ BearHttpsResponse * BearHttpsRequest_fetch(BearHttpsRequest *self){
 
 //silver_chain_scope_end
 
+
 BearHttpsRequest * newBearHttpsRequest_with_url_ownership_config(char *url,short url_ownership_mode){
     BearHttpsRequest *self = (BearHttpsRequest *)malloc(sizeof(BearHttpsRequest));
     *self = (BearHttpsRequest){0};
@@ -989,6 +1001,7 @@ void BearHttpsRequest_free(BearHttpsRequest *self){
 
 //silver_chain_scope_end
 
+
 private_BearHttpsRequisitionProps * private_new_private_BearHttpsRequisitionProps(const char *url,int default_port){
     int url_size = private_BearsslHttps_strlen(url);
     const short HTTP_START_SIZE = sizeof("http://")-1;
@@ -1081,6 +1094,7 @@ void private_BearHttpsRequisitionProps_free(private_BearHttpsRequisitionProps *s
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 void private_BearHttpsResponse_parse_headers(BearHttpsResponse *self,int headers_end){
@@ -1213,6 +1227,7 @@ void private_BearHttpsResponse_read_til_end_of_headers_or_reach_limit(
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 int private_BearHttpsResponse_write(BearHttpsResponse *self,unsigned char *bufer,long size){
@@ -1412,6 +1427,7 @@ cJSON * BearHttpsResponse_read_body_json(BearHttpsResponse *self){
 //silver_chain_scope_end
 
 
+
 BearHttpsResponse *private_newBearHttpsResponse(){
     BearHttpsResponse *self = (BearHttpsResponse *)malloc(sizeof(BearHttpsResponse));
     *self = (BearHttpsResponse){0};
@@ -1555,6 +1571,7 @@ char* BearHttpsResponse_get_header_value_by_sanitized_key(BearHttpsResponse*self
 
 //silver_chain_scope_end
 
+
 #ifdef _WIN32
 typedef __m128i __m128i_u;
 #endif
@@ -1593,6 +1610,7 @@ SOFTWARE.
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 extern ssize_t Universal_send (int fd, const void *buf, size_t n, int flags){
@@ -1717,6 +1735,7 @@ extern in_addr_t Universal_inet_addr(const char *ip) {
 
 //silver_chain_scope_end
 
+
 extern int Universal_bind (int fd, Universal_sockaddr_in  *addrin , Universal_socket_len len){
     return bind(fd,(const struct sockaddr *)addrin,len);
 }
@@ -1743,6 +1762,7 @@ extern int Universal_connect(int sockfd, const Universal_sockaddr *addr, socklen
 
 
 
+
 const char* Universal_gai_strerror(int e_code){
     return gai_strerror(e_code);
 }
@@ -1754,6 +1774,7 @@ const char* Universal_gai_strerror(int e_code){
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 int Universal_socket (int domain, int type, int protocol){
     return socket(domain,type,protocol);
@@ -1803,6 +1824,7 @@ Universal_hostent *Universal_gethostbyname(const char *hostname){
 //silver_chain_scope_end
 
 
+
 #if defined(__linux__)
 
 extern const char* Universal_inet_ntoa(Universal_in_addr addr) {
@@ -1825,6 +1847,7 @@ extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags){
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 #if defined(__linux__)
@@ -1850,6 +1873,7 @@ extern char *Universal_GetLastError(){
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 #if defined(__linux__)
 
@@ -1893,6 +1917,7 @@ void Universal_freeaddrinfo(Universal_addrinfo *addrinfo_ptr){
 //silver_chain_scope_end
 
 
+
 #if defined(_WIN32)
 
 extern const char* Universal_inet_ntoa(Universal_in_addr addr) {
@@ -1904,10 +1929,11 @@ ssize_t private_Universal_recv_all(int fd, void *buf, size_t n){
   int received;
 
   while (max < n) {
-    received = recv(fd, buf + max, n - max, 0);
+    unsigned char *ptr = (unsigned char*)buf + max;
+    received = recv(fd,ptr, n - max, 0);
   
     if (received <= 0) { 
-      return received;
+      return max;
     }
 
     max += received;
@@ -1936,6 +1962,7 @@ extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags){
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 #if defined(_WIN32)
@@ -1980,6 +2007,7 @@ extern char *Universal_GetLastError(){
 
 
 
+
 #if defined(_WIN32)
 
 extern int Universal_start_all (){
@@ -1989,7 +2017,7 @@ extern int Universal_start_all (){
 }
 
 extern int Universal_end (){
-    WSACleanup();
+   return  WSACleanup();
 }
 
 extern int Universal_close (int fd){
@@ -66386,6 +66414,7 @@ CJSON_PUBLIC(void) cJSON_free(void *object)
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 long private_BearsslHttps_strlen(const char *str){
     long size = 0;
