@@ -11,8 +11,8 @@ curl -L https://github.com/OUIsolutions/BearSslSingle-Unit/releases/download/0.0
 curl -L https://github.com/OUIsolutions/BearSslSingle-Unit/releases/download/0.0.3/BearSSLSingleUnit.c -o dependencies/BearSSLSingleUnit.c
 curl -L https://raw.githubusercontent.com/DaveGamble/cJSON/refs/tags/v1.7.18/cJSON.c -o dependencies/cJSON.c
 curl -L https://raw.githubusercontent.com/DaveGamble/cJSON/refs/tags/v1.7.18/cJSON.h -o dependencies/cJSON.h
-curl -L https://github.com/SamuelHenriqueDeMoraisVitrio/UniversalSocket/releases/download/v0.2.6/UniversalSocket.c -o dependencies/UniversalSocket.c
-curl -L https://github.com/SamuelHenriqueDeMoraisVitrio/UniversalSocket/releases/download/v0.2.6/UniversalSocket.h -o dependencies/UniversalSocket.h
+curl -L https://github.com/SamuelHenriqueDeMoraisVitrio/UniversalSocket/releases/download/v0.2.7/UniversalSocket.c -o dependencies/UniversalSocket.c
+curl -L https://github.com/SamuelHenriqueDeMoraisVitrio/UniversalSocket/releases/download/v0.2.7/UniversalSocket.h -o dependencies/UniversalSocket.h
 
 curl -L https://curl.se/ca/cacert.pem -o dependencies/cacert.pem
 
