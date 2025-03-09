@@ -69,6 +69,7 @@ SOFTWARE.
 //silver_chain_scope_end
 
 
+
 #define UNI_AF_INET AF_INET
 #define UNI_INADDR_ANY INADDR_ANY
 #define UNI_FD_SET FD_SET
@@ -115,6 +116,7 @@ SOFTWARE.
 //silver_chain_scope_end
 
 
+
 #if defined(__linux__)
 
 #define UNI_INVALID_SOCKET -1
@@ -143,6 +145,7 @@ SOFTWARE.
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 #if defined(_WIN32)
@@ -185,6 +188,7 @@ SOFTWARE.
 
 //silver_chain_scope_end
 
+
 typedef struct sockaddr Universal_sockaddr;
 
 typedef struct sockaddr_in Universal_sockaddr_in;
@@ -212,6 +216,7 @@ typedef struct hostent Universal_hostent;
 
 //silver_chain_scope_end
 
+
 #if defined(__linux__)
 
 typedef int Universal_socket_int;
@@ -231,6 +236,7 @@ typedef ssize_t Universal_ssize_t;
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 
@@ -262,6 +268,7 @@ typedef long Universal_ssize_t;
 
 
 
+
 extern const char* Universal_inet_ntoa(Universal_in_addr addr);
 
 extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags);
@@ -274,6 +281,7 @@ extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags);
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 extern ssize_t Universal_send (int fd, const void *buf, size_t n, int flags);
@@ -300,6 +308,7 @@ extern in_addr_t Universal_inet_addr(const char *ip);
 
 //silver_chain_scope_end
 
+
 extern int Universal_bind (int fd,Universal_sockaddr_in  *addrin , Universal_socket_len len);
 
 extern int Universal_accept (int fd, Universal_sockaddr_in *addrin,
@@ -323,6 +332,7 @@ extern int Universal_connect(int sockfd, const Universal_sockaddr *addr, socklen
 
 
 
+
 int Universal_getaddrinfo(const char *node, const char *service, const Universal_addrinfo *hints, Universal_addrinfo **res);
 
 
@@ -336,6 +346,7 @@ int Universal_getaddrinfo(const char *node, const char *service, const Universal
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 extern char *Universal_GetLastError();
@@ -354,6 +365,7 @@ extern char *Universal_GetLastError();
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 extern int Universal_start_all ();
 
@@ -378,6 +390,7 @@ void Universal_freeaddrinfo(Universal_addrinfo *addrinfo_ptr);
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 int Universal_socket (int domain, int type, int protocol);
 
@@ -412,6 +425,7 @@ Universal_hostent *Universal_gethostbyname(const char *hostname);
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 

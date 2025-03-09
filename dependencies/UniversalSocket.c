@@ -33,6 +33,7 @@ SOFTWARE.
 //silver_chain_scope_end
 
 
+
 extern ssize_t Universal_send (int fd, const void *buf, size_t n, int flags){
     return send(fd,buf,n,flags);
 }
@@ -155,6 +156,7 @@ extern in_addr_t Universal_inet_addr(const char *ip) {
 
 //silver_chain_scope_end
 
+
 extern int Universal_bind (int fd, Universal_sockaddr_in  *addrin , Universal_socket_len len){
     return bind(fd,(const struct sockaddr *)addrin,len);
 }
@@ -181,6 +183,7 @@ extern int Universal_connect(int sockfd, const Universal_sockaddr *addr, socklen
 
 
 
+
 const char* Universal_gai_strerror(int e_code){
     return gai_strerror(e_code);
 }
@@ -192,6 +195,7 @@ const char* Universal_gai_strerror(int e_code){
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 int Universal_socket (int domain, int type, int protocol){
     return socket(domain,type,protocol);
@@ -241,6 +245,7 @@ Universal_hostent *Universal_gethostbyname(const char *hostname){
 //silver_chain_scope_end
 
 
+
 #if defined(__linux__)
 
 extern const char* Universal_inet_ntoa(Universal_in_addr addr) {
@@ -263,6 +268,7 @@ extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags){
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 #if defined(__linux__)
@@ -288,6 +294,7 @@ extern char *Universal_GetLastError(){
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 #if defined(__linux__)
 
@@ -331,6 +338,7 @@ void Universal_freeaddrinfo(Universal_addrinfo *addrinfo_ptr){
 //silver_chain_scope_end
 
 
+
 #if defined(_WIN32)
 
 extern const char* Universal_inet_ntoa(Universal_in_addr addr) {
@@ -342,10 +350,11 @@ ssize_t private_Universal_recv_all(int fd, void *buf, size_t n){
   int received;
 
   while (max < n) {
-    received = recv(fd, buf + max, n - max, 0);
+    unsigned char *ptr = (unsigned char*)buf + max;
+    received = recv(fd,ptr, n - max, 0);
   
     if (received <= 0) { 
-      return received;
+      return max;
     }
 
     max += received;
@@ -374,6 +383,7 @@ extern ssize_t Universal_recv (int fd, void *buf, size_t n, int flags){
 //mannaged by SilverChain: https://github.com/OUIsolutions/SilverChain
 
 //silver_chain_scope_end
+
 
 
 #if defined(_WIN32)
@@ -418,6 +428,7 @@ extern char *Universal_GetLastError(){
 
 
 
+
 #if defined(_WIN32)
 
 extern int Universal_start_all (){
@@ -427,7 +438,7 @@ extern int Universal_start_all (){
 }
 
 extern int Universal_end (){
-    WSACleanup();
+   return  WSACleanup();
 }
 
 extern int Universal_close (int fd){
